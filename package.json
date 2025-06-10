@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Lekha-2005.github.io/NEWSAPP",
+  "homepage": "https://Lekha-2005.github.io/REPO",
   "name": "learn-react",
   "private": true,
   "version": "0.0.0",
@@ -9,8 +9,8 @@
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "vite build",
+    "deploy": "gh-pages -d dist"
   },
   "dependencies": {
     "react": "^19.1.0",
