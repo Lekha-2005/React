@@ -1,5 +1,4 @@
 {
-  "homepage": "https://Lekha-2005.github.io/REPO",
   "name": "learn-react",
   "private": true,
   "version": "0.0.0",
@@ -8,9 +7,8 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview",
-    "predeploy": "vite build",
-    "deploy": "gh-pages -d dist"
+    "preview": "vite preview"
+
   },
   "dependencies": {
     "react": "^19.1.0",
