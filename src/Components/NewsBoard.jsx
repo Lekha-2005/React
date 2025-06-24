@@ -4,11 +4,15 @@ import { Newsitem } from './Newsitem.jsx';
 export const NewsBoard = ({category}) => {
 
     const [articles,setArticles]=useState([]);
+    useEffect(() => {
+      fetch(`/.netlify/functions/news?category=${category}`)
+        .then(res => res.json())
+        .then(data => setArticles(data.articles || []))
+        .catch(err => console.error(err));
+    }, [category]);
 
-    useEffect(()=>{
-        let url =`https://newsapi.org/v2/top-headlines?country=us&category=${category}&apiKey=${import.meta.env.VITE_API_KEY}`;
-        fetch(url).then(response=>response.json()).then(data=>setArticles(data.articles));
-    },[category])
+    console.log(articles);
+    
 
 
   return (
